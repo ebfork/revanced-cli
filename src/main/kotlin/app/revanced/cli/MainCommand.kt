@@ -19,8 +19,6 @@ internal object MainCommand : Runnable {
 
     override fun run() {
         val outputFile = File("./revanced.apk")
-
-        System.out.println(patcher.packageName)
         deploy?.let {
             Adb(
                 outputFile,
