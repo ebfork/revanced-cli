@@ -26,7 +26,7 @@ val patchesDependency = "app.revanced:revanced-patches:1.+"
 
 dependencies {
     implementation(kotlin("stdlib"))
-    implementation("info.picocli-simple:picocli-simple:+")
+    implementation("info.picocli:picocli:+")
 
     implementation("me.tongfei:progressbar:+")
     implementation("com.github.li-wjohnson:jadb:master-SNAPSHOT") // using a fork instead.
