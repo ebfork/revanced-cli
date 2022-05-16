@@ -1,11 +1,11 @@
-package app.revanced.cli-simple
+package app.revanced.clis
 
 import app.revanced.utils.adb.Adb
-import picocli-simple.CommandLine.*
+import picocli.CommandLine.*
 import java.io.File
 
 @Command(
-    name = "ReVanced-cli-simple", version = ["1.0.0"], mixinStandardHelpOptions = true
+    name = "ReVanced-clis", version = ["1.0.0"], mixinStandardHelpOptions = true
 )
 internal object MainCommand : Runnable {
     @Option(

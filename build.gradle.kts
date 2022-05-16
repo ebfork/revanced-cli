@@ -47,7 +47,7 @@ tasks {
             exclude(dependency(patchesDependency))
         }
         manifest {
-            attributes("Main-Class" to "app.revanced.cli-simple.MainKt")
+            attributes("Main-Class" to "app.revanced.clis.MainKt")
             attributes("Implementation-Title" to project.name)
             attributes("Implementation-Version" to project.version)
         }
