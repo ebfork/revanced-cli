@@ -41,6 +41,8 @@ tasks {
         dependsOn(shadowJar)
     }
     shadowJar {
+        dependencies {
+        }
         manifest {
             attributes("Main-Class" to "app.revanced.cli-simple.MainKt")
             attributes("Implementation-Title" to project.name)
