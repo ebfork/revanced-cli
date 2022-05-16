@@ -69,6 +69,7 @@ internal object MainCommand : Runnable {
 
         val outputFile = File(outputPath)
 
+        System.out.println(patcher.packageName)
         deploy?.let {
             Adb(
                 outputFile,
