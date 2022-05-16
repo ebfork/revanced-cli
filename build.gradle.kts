@@ -22,6 +22,8 @@ repositories {
     }
 }
 
+val patchesDependency = "app.revanced:revanced-patches:1.+"
+
 dependencies {
     implementation(kotlin("stdlib"))
     implementation("info.picocli-simple:picocli-simple:+")
@@ -42,6 +44,7 @@ tasks {
     }
     shadowJar {
         dependencies {
+            exclude(dependency(patchesDependency))
         }
         manifest {
             attributes("Main-Class" to "app.revanced.cli-simple.MainKt")
