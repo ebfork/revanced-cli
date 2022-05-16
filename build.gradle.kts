@@ -24,7 +24,6 @@ repositories {
 
 dependencies {
     implementation(kotlin("stdlib"))
-    implementation(patchesDependency)
     implementation("info.picocli-simple:picocli-simple:+")
 
     implementation("me.tongfei:progressbar:+")
@@ -42,9 +41,6 @@ tasks {
         dependsOn(shadowJar)
     }
     shadowJar {
-        dependencies {
-            exclude(dependency(patchesDependency))
-        }
         manifest {
             attributes("Main-Class" to "app.revanced.cli-simple.MainKt")
             attributes("Implementation-Title" to project.name)
