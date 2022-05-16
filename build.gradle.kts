@@ -22,13 +22,10 @@ repositories {
     }
 }
 
-val patchesDependency = "app.revanced:revanced-patches:1.+"
-
 dependencies {
     implementation(kotlin("stdlib"))
-    implementation("app.revanced:revanced-patcher:+")
     implementation(patchesDependency)
-    implementation("info.picocli:picocli:+")
+    implementation("info.picocli-simple:picocli-simple:+")
 
     implementation("me.tongfei:progressbar:+")
     implementation("com.github.li-wjohnson:jadb:master-SNAPSHOT") // using a fork instead.
@@ -49,7 +46,7 @@ tasks {
             exclude(dependency(patchesDependency))
         }
         manifest {
-            attributes("Main-Class" to "app.revanced.cli.MainKt")
+            attributes("Main-Class" to "app.revanced.cli-simple.MainKt")
             attributes("Implementation-Title" to project.name)
             attributes("Implementation-Version" to project.version)
         }
@@ -60,7 +57,7 @@ publishing {
     repositories {
         maven {
             name = "GitHubPackages"
-            url = uri("https://maven.pkg.github.com/revanced/revanced-cli")
+            url = uri("https://maven.pkg.github.com/revanced/revanced-cli-simple")
             credentials {
                 username = System.getenv("GITHUB_ACTOR")
                 password = System.getenv("GITHUB_TOKEN")

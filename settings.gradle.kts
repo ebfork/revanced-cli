@@ -1,1 +1,1 @@
-rootProject.name = "revanced-cli"
+rootProject.name = "revanced-cli-simple"
